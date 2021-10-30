@@ -1,0 +1,11 @@
+1. dlib
+(기본)
+- project의 source files에 dlib/all/souce.cpp 추가
+- include directories에 dlib위치 추가 (X)
+(jpeg)
+- dlib/external/libjpeg의 소스코드들을 모아 프로젝트 생성 후,
+ C/C++ 전처리기에 DLIB_JPEG_STATIC추가하고 빌드 -------> libjpeg.lib 생성 (x64, win32 각각)
+- 위에서 생성한 lib파일의 위치를 library directories에 추가하고 해당파일을 linker의 input에 추가
+- C/C++ 전처리기에 DLIB_JPEG_SUPPORT와 DLIB_JPEG_STATIC를 추가
+(png)
+- jpeg과 동일
